@@ -32,6 +32,8 @@
 #include "bsp.h"
 #include "LocalNavigation.h"
 #include "MobileCommand.h"
+#include "DJI_Type.h"
+
 
 extern uint32_t tick; //tick is the time stamp,which record how many ms since u initialize the system.
 //warnning: after 49 days of non-reset running, tick will RESET to ZERO.

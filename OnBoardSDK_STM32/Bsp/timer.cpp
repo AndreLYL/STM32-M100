@@ -72,6 +72,9 @@ void Timer2Config()
   TIM_Cmd(TIM2, DISABLE);
 
 }
+
+
+
 void SystickConfig()
 {
   if (SysTick_Config(SystemCoreClock / 1000)) //1000 ticks per second.

@@ -23,8 +23,8 @@ I (..\Lib\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_syscfg.h)(0x58943D3E)
 I (..\Lib\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_tim.h)(0x58943D3E)
 I (..\Lib\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h)(0x58943D3E)
 I (..\Lib\STM32F4xx_StdPeriph_Driver\inc\misc.h)(0x58943D3E)
-F (..\User\main.cpp)(0x58D0F0EF)(--cpp -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I ..\Lib\CMSIS\inc -I ..\Lib\STM32F4xx_StdPeriph_Driver\inc -I ..\User -I ..\Bsp -I ..\..\..\..\osdk-core\inc-I.\RTE\_DJI_LIB-ID:\Software\Keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Software\Keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\Software\Keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F407xx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx -DUSE_STM324xG_EVAL -DSTM32 -DSTM32F40x -DARM_MATH_CM4 -D__FPU_PRESENT-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
-I (..\User\main.h)(0x58943D3E)
+F (..\User\main.cpp)(0x58D922EC)(--cpp -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I ..\Lib\CMSIS\inc -I ..\Lib\STM32F4xx_StdPeriph_Driver\inc -I ..\User -I ..\Bsp -I ..\..\..\..\osdk-core\inc-I.\RTE\_DJI_LIB-ID:\Software\Keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Software\Keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\Software\Keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F407xx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx -DUSE_STM324xG_EVAL -DSTM32 -DSTM32F40x -DARM_MATH_CM4 -D__FPU_PRESENT-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (..\User\main.h)(0x58D647AA)
 I (D:\Software\Keil5\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (D:\Software\Keil5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (..\..\..\..\osdk-core\inc\DJI_API.h)(0x58943D3E)
@@ -133,7 +133,7 @@ I (D:\Software\Keil5\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (..\..\..\..\osdk-core\inc\DJI_VirtualRC.h)(0x58943D3E)
 F (..\User\HotPoint.cpp)(0x58943D3E)(--cpp -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I ..\Lib\CMSIS\inc -I ..\Lib\STM32F4xx_StdPeriph_Driver\inc -I ..\User -I ..\Bsp -I ..\..\..\..\osdk-core\inc-I.\RTE\_DJI_LIB-ID:\Software\Keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Software\Keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\Software\Keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F407xx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx -DUSE_STM324xG_EVAL -DSTM32 -DSTM32F40x -DARM_MATH_CM4 -D__FPU_PRESENT-o .\objects\hotpoint.o --omf_browse .\objects\hotpoint.crf --depend .\objects\hotpoint.d)
 I (..\User\HotPoint.h)(0x58943D3E)
-I (..\User\main.h)(0x58943D3E)
+I (..\User\main.h)(0x58D647AA)
 I (D:\Software\Keil5\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (D:\Software\Keil5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (..\..\..\..\osdk-core\inc\DJI_API.h)(0x58943D3E)
@@ -189,9 +189,9 @@ I (..\User\Receive.h)(0x58943D3E)
 I (..\Bsp\bsp.h)(0x58943D3E)
 I (..\User\LocalNavigation.h)(0x58943D3E)
 I (..\User\MobileCommand.h)(0x58943D3E)
-F (..\User\Receive.cpp)(0x58D0EE3D)(--cpp -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I ..\Lib\CMSIS\inc -I ..\Lib\STM32F4xx_StdPeriph_Driver\inc -I ..\User -I ..\Bsp -I ..\..\..\..\osdk-core\inc-I.\RTE\_DJI_LIB-ID:\Software\Keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Software\Keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\Software\Keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F407xx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx -DUSE_STM324xG_EVAL -DSTM32 -DSTM32F40x -DARM_MATH_CM4 -D__FPU_PRESENT-o .\objects\receive.o --omf_browse .\objects\receive.crf --depend .\objects\receive.d)
+F (..\User\Receive.cpp)(0x58D1384F)(--cpp -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I ..\Lib\CMSIS\inc -I ..\Lib\STM32F4xx_StdPeriph_Driver\inc -I ..\User -I ..\Bsp -I ..\..\..\..\osdk-core\inc-I.\RTE\_DJI_LIB-ID:\Software\Keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Software\Keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\Software\Keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F407xx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx -DUSE_STM324xG_EVAL -DSTM32 -DSTM32F40x -DARM_MATH_CM4 -D__FPU_PRESENT-o .\objects\receive.o --omf_browse .\objects\receive.crf --depend .\objects\receive.d)
 I (..\User\Receive.h)(0x58943D3E)
-I (..\User\main.h)(0x58943D3E)
+I (..\User\main.h)(0x58D647AA)
 I (D:\Software\Keil5\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (D:\Software\Keil5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (..\..\..\..\osdk-core\inc\DJI_API.h)(0x58943D3E)
@@ -361,7 +361,7 @@ I (..\Lib\CMSIS\inc\core_cmFunc.h)(0x58943D3E)
 I (..\Lib\CMSIS\inc\core_cm4_simd.h)(0x58943D3E)
 I (D:\Software\Keil5\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (D:\Software\Keil5\ARM\ARMCC\include\math.h)(0x57F606B6)
-I (..\User\main.h)(0x58943D3E)
+I (..\User\main.h)(0x58D647AA)
 I (..\User\driver.h)(0x58943D3E)
 I (..\Lib\CMSIS\inc\stm32f4xx.h)(0x58943D3E)
 I (..\Lib\CMSIS\inc\system_stm32f4xx.h)(0x58943D3E)
@@ -435,7 +435,7 @@ I (..\..\..\..\osdk-core\inc\DJI_Link.h)(0x58943D3E)
 I (..\..\..\..\osdk-core\inc\DJI_Flight.h)(0x58943D3E)
 F (..\Bsp\bsp.cpp)(0x58943D3E)(--cpp -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I ..\Lib\CMSIS\inc -I ..\Lib\STM32F4xx_StdPeriph_Driver\inc -I ..\User -I ..\Bsp -I ..\..\..\..\osdk-core\inc-I.\RTE\_DJI_LIB-ID:\Software\Keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Software\Keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\Software\Keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F407xx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx -DUSE_STM324xG_EVAL -DSTM32 -DSTM32F40x -DARM_MATH_CM4 -D__FPU_PRESENT-o .\objects\bsp.o --omf_browse .\objects\bsp.crf --depend .\objects\bsp.d)
 I (..\Bsp\bsp.h)(0x58943D3E)
-I (..\User\main.h)(0x58943D3E)
+I (..\User\main.h)(0x58D647AA)
 I (D:\Software\Keil5\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (D:\Software\Keil5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (..\..\..\..\osdk-core\inc\DJI_API.h)(0x58943D3E)
@@ -491,7 +491,7 @@ I (..\User\HotPoint.h)(0x58943D3E)
 I (..\User\Receive.h)(0x58943D3E)
 I (..\User\LocalNavigation.h)(0x58943D3E)
 I (..\User\MobileCommand.h)(0x58943D3E)
-F (..\Bsp\timer.cpp)(0x58943D3E)(--cpp -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I ..\Lib\CMSIS\inc -I ..\Lib\STM32F4xx_StdPeriph_Driver\inc -I ..\User -I ..\Bsp -I ..\..\..\..\osdk-core\inc-I.\RTE\_DJI_LIB-ID:\Software\Keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Software\Keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\Software\Keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F407xx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx -DUSE_STM324xG_EVAL -DSTM32 -DSTM32F40x -DARM_MATH_CM4 -D__FPU_PRESENT-o .\objects\timer.o --omf_browse .\objects\timer.crf --depend .\objects\timer.d)
+F (..\Bsp\timer.cpp)(0x58D675CC)(--cpp -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork -I ..\Lib\CMSIS\inc -I ..\Lib\STM32F4xx_StdPeriph_Driver\inc -I ..\User -I ..\Bsp -I ..\..\..\..\osdk-core\inc-I.\RTE\_DJI_LIB-ID:\Software\Keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Software\Keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\Software\Keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F407xx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx -DUSE_STM324xG_EVAL -DSTM32 -DSTM32F40x -DARM_MATH_CM4 -D__FPU_PRESENT-o .\objects\timer.o --omf_browse .\objects\timer.crf --depend .\objects\timer.d)
 I (..\Bsp\timer.h)(0x58943D3E)
 I (..\..\..\..\osdk-core\inc\DJI_API.h)(0x58943D3E)
 I (..\..\..\..\osdk-core\inc\DJI_Type.h)(0x58943D3E)
@@ -534,7 +534,7 @@ I (..\Lib\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_tim.h)(0x58943D3E)
 I (..\Lib\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h)(0x58943D3E)
 I (..\Lib\STM32F4xx_StdPeriph_Driver\inc\misc.h)(0x58943D3E)
 I (..\..\..\..\osdk-core\inc\DJI_VirtualRC.h)(0x58943D3E)
-I (..\User\main.h)(0x58943D3E)
+I (..\User\main.h)(0x58D647AA)
 I (..\User\driver.h)(0x58943D3E)
 I (..\..\..\..\osdk-core\inc\DJI_Flight.h)(0x58943D3E)
 I (..\Bsp\BspUsart.h)(0x58943D3E)

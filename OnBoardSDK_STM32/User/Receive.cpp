@@ -147,7 +147,7 @@ void TerminalCommand::terminalCommandHandler(CoreAPI* api, Flight* flight)
   case 0x08:																																				//0xFA 0xFB 0x08 0xFE
     printf("TimeStamp is %d\r\n", api->getBroadcastData().timeStamp.time);
     printf("Battery capacity remains %d percent\r\n",
-        api->getBroadcastData().rc);
+        api->getBroadcastData().battery);
     break;
 
 
