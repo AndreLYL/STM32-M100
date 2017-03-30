@@ -120,18 +120,18 @@ int main()
 		{
 				Changmen=1000;		
 		}
-		else     //舱门关
+		if((a.mode==0)&&(a.gear==(-10000)))     //舱门关
 		{
-				Changmen=1000;		
+				Changmen=1900;		
 		}
-		if((a.mode==(-8000))&&(a.gear==(-4545)))			//P档和拨码在下面 摩擦轮转
-		{
-				PWM1=1000;
-		}
-		else 		//摩擦轮停止
-		{
-		
-		}
+//		if((a.mode==(-8000))&&(a.gear==(-4545)))			//P档和拨码在下面 摩擦轮转
+//		{
+//				PWM1=1000;
+//		}
+//		else 		//摩擦轮停止
+//		{
+//		
+//		}
 		
 //		QuaternionData q;
 //		q=flight.getQuaternion();
@@ -140,9 +140,9 @@ int main()
 		
 		
 	
-		delay_nms(1000);
-		delay_nms(1000);
-		delay_nms(1000);
+//		delay_nms(1000);
+//		delay_nms(1000);
+//		delay_nms(1000);
 
 	
   }
