@@ -41,6 +41,7 @@ VirtualRCData myVRCdata =
     1024, 1024 };
 
 RadioData a={0,0,0,0,0,0};
+GimbalData b;
 		
 extern TerminalCommand myTerminal;
 extern LocalNavigationStatus droneState;
@@ -48,7 +49,7 @@ extern uint8_t myFreq[16];
 		
 
 #define PWM1  TIM5->CCR1
-//#define PWM2  TIM5->CCR2
+#define PWM2  TIM5->CCR2
 //#define PWM3  TIM9->CCR1
 #define Changmen  TIM14->CCR1	
 void PWM_Configuration(void);
@@ -56,14 +57,34 @@ void TIM14_PWM_Init(u32 arr,u32 psc);
 		
 		
 
+/*
+ * @brief Helper function to assemble two bytes into a float number
+ */
+static float32_t hex2Float(uint8_t HighByte, uint8_t LowByte)
+{
+  float32_t high = (float32_t) (HighByte & 0x7f);
+  float32_t low  = (float32_t) LowByte;
+  if (HighByte & 0x80)//MSB is 1 means a negative number
+  {
+    return -(high*256.0f + low)/100.0f;
+  }
+  else
+  {
+    return (high*256.0f + low)/100.0f;
+  }
+}
+
+
+
+
 int main()
 {
   BSPinit();
   delay_nms(30);
 	PWM_Configuration();
-	
+	PWM1=1000;
 	TIM14_PWM_Init(2000-1,840-1);
-	Changmen=1000;
+	Changmen=1900;
 
 //  printf("This is the example App to test DJI onboard SDK on STM32F4Discovery Board! \r\n");
 //  printf("Refer to \r\n");
@@ -96,6 +117,9 @@ int main()
       delay_nms(50);
 
       next500MilTick = driver->getTimeStamp() + 500;
+			
+			
+	
     }
 
 //    if (driver->getTimeStamp() >= next500MilTick)
@@ -108,9 +132,17 @@ int main()
 //      // Handle user commands from serial (USART2)
 //      myTerminal.terminalCommandHandler(coreApi, &flight);
 //    }
+		
+		
+		
 
+		
+		
 
+		
+		
 		a=virtualrc.getRCData();
+		b=coreApi->getBroadcastData().gimbal;
 
 //		Changmen=1000;
 //		PWM2=1000;
@@ -118,28 +150,56 @@ int main()
 		
 		if((a.mode==0)&&(a.gear==(-4545)))    //A档和拨码在下面  舱门开
 		{
-				Changmen=1000;		
+				Changmen=1000;	
 		}
+		else
+			;
 		if((a.mode==0)&&(a.gear==(-10000)))     //舱门关
 		{
-				Changmen=1900;		
+				Changmen=1900;
 		}
-//		if((a.mode==(-8000))&&(a.gear==(-4545)))			//P档和拨码在下面 摩擦轮转
-//		{
-//				PWM1=1000;
-//		}
-//		else 		//摩擦轮停止
-//		{
-//		
-//		}
-		
+		else 
+			;
+		if((a.mode==(-8000))&&(a.gear==(-4545)))			//P档和拨码在下面 摩擦轮转
+		{
+				PWM1=1300;
+		}		
+		else
+		{
+				PWM1=1000;
+		}
+		if((a.mode==(8000))&&(a.gear==(-4545)))			//P档和拨码在下面 摩擦轮转
+		{
+				PWM2=1500;
+			
+//				coreApi->setControl(0x01);							//请求控制权		
+//				flight.task(Flight::TASK_TAKEOFF);			//一键起飞
+//				flightData.flag = 0x88;									
+//				flightData.x = hex2Float(0x00, 0x64);
+//				flightData.y = hex2Float(0x00, 0x00);
+//				flightData.z = hex2Float(0x00, 0x00);
+//				flightData.yaw = hex2Float(0x00, 0x05);
+//				flight.setFlight(&flightData);
+//				TIM_Cmd(TIM2, ENABLE);			
+//				coreApi->setControl(0x00);							//请求控制权	
+//////		while(1);
+//				delay_nms(1000);
+//				delay_nms(1000);
+//				delay_nms(1000);
+//				flight.task(Flight::TASK_LANDING);
+
+			
+		}		
+		else
+		{
+//				coreApi->setControl(0x00);			//释放控制权						
+				PWM2=900;
+		}
 //		QuaternionData q;
 //		q=flight.getQuaternion();
 
 //		coreApi->sendPoll();
 		
-		
-	
 //		delay_nms(1000);
 //		delay_nms(1000);
 //		delay_nms(1000);
@@ -164,7 +224,7 @@ void PWM_Configuration(void)
     
     RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA ,ENABLE);
     RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM5, ENABLE);   //PCLK1=42MHz,TIM5 clk =84MHz
-	RCC_APB2PeriphClockCmd(RCC_APB2Periph_TIM9, ENABLE);   //PCLK1=42MHz,TIM2 clk =84MHz
+	  RCC_APB2PeriphClockCmd(RCC_APB2Periph_TIM9, ENABLE);   //PCLK1=42MHz,TIM2 clk =84MHz
 
     gpio.GPIO_Pin = GPIO_Pin_0 | GPIO_Pin_1 | GPIO_Pin_2;
     gpio.GPIO_Mode = GPIO_Mode_AF;

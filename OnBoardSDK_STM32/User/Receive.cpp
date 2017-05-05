@@ -74,12 +74,13 @@ void TerminalCommand::terminalCommandHandler(CoreAPI* api, Flight* flight)
   case 0x04:
     if (cmdIn[3] == 0x01)
     {
-      flightData.flag = cmdIn[4];
-      flightData.x = hex2Float(cmdIn[5], cmdIn[6]);
-      flightData.y = hex2Float(cmdIn[7], cmdIn[8]);
-      flightData.z = hex2Float(cmdIn[9], cmdIn[10]);
-      flightData.yaw = hex2Float(cmdIn[11], cmdIn[12]);
-      flight->setFlight(&flightData);
+			flightData.flag = cmdIn[4];
+			flightData.x = hex2Float(cmdIn[5], cmdIn[6]);
+			flightData.y = hex2Float(cmdIn[7], cmdIn[8]);
+			flightData.z = hex2Float(cmdIn[9], cmdIn[10]);
+			flightData.yaw = hex2Float(cmdIn[11], cmdIn[12]);
+			flight->setFlight(&flightData);
+
       TIM_Cmd(TIM2, ENABLE);
       printf("roll_or_x =%f\n", hex2Float(cmdIn[5], cmdIn[6]));
       printf("pitch_or_y =%f\n", hex2Float(cmdIn[7], cmdIn[8]));
@@ -138,11 +139,6 @@ void TerminalCommand::terminalCommandHandler(CoreAPI* api, Flight* flight)
       stopHotpoint();
     }
     break;
-//  case 0x08:
-//    printf("TimeStamp is %d\r\n", api->getBroadcastData().timeStamp.time);
-//    printf("Battery capacity remains %d percent\r\n",
-//        api->getBroadcastData().battery);
-//    break;
 		
   case 0x08:																																				//0xFA 0xFB 0x08 0xFE
     printf("TimeStamp is %d\r\n", api->getBroadcastData().timeStamp.time);
